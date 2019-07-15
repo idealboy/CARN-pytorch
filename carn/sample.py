@@ -41,7 +41,7 @@ def sample(net, device, dataset, cfg):
             h_half, w_half = int(h/2), int(w/2)
             h_chop, w_chop = h_half + cfg.shave, w_half + cfg.shave
 
-            lr_patch = torch.tensor((4, 3, h_chop, w_chop), dtype=torch.float)
+            lr_patch = torch.zeros((4, 3, h_chop, w_chop), dtype=torch.float)
             lr_patch[0].copy_(lr[:, 0:h_chop, 0:w_chop])
             lr_patch[1].copy_(lr[:, 0:h_chop, w-w_chop:w])
             lr_patch[2].copy_(lr[:, h-h_chop:h, 0:w_chop])

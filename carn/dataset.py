@@ -81,8 +81,8 @@ class TestDataset(data.Dataset):
         self.scale = scale
         
         if "DIV" in self.name:
-            self.hr = glob.glob(os.path.join("{}_HR".format(dirname), "*.png"))
-            self.lr = glob.glob(os.path.join("{}_LR_bicubic".format(dirname), 
+            self.hr = glob.glob(os.path.join("{}/{}_valid_HR".format(dirname, self.name), "*.png"))
+            self.lr = glob.glob(os.path.join("{}/{}_valid_LR_bicubic".format(dirname, self.name), 
                                              "X{}/*.png".format(scale)))
         else:
             all_files = glob.glob(os.path.join(dirname, "x{}/*.png".format(scale)))
