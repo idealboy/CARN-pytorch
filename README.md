@@ -13,7 +13,7 @@ In recent years, deep learning methods have been successfully applied to single-
 
 ### Requirements
 - Python 3
-- [PyTorch](https://github.com/pytorch/pytorch) (0.4.0), [torchvision](https://github.com/pytorch/vision)
+- [PyTorch](https://github.com/pytorch/pytorch) (1.0.1), [torchvision](https://github.com/pytorch/vision)
 - Numpy, Scipy
 - Pillow, Scikit-image
 - h5py
